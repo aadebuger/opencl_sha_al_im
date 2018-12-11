@@ -1,0 +1,7 @@
+project( sha1 )
+cmake_minimum_required( VERSION 2.6 )
+file( GLOB SRCS sha1/*.c sha1/*.cpp  sha1/*.h  )
+add_executable( ${PROJECT_NAME} sha1/main.cpp  sha1/sha1.c )
+target_link_libraries(${PROJECT_NAME} "-framework OpenCL")
+add_executable( sha1simple sha1/mainsimple.cpp sha1/sha1simple.c)
+target_link_libraries(sha1simple "-framework OpenCL")
